@@ -1,0 +1,63 @@
+.header {
+  font-family: "Lexend", sans-serif;
+}
+.offerContainer {
+  background-color: rgba(5, 66, 44, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 37px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.offerText {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-size: 14px;
+  width: 100%;
+}
+.middleLayer {
+  margin-top: 37px;
+  height: 64px;
+  padding: 14px 64px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 270px;
+}
+
+.accountContainer {
+  text-align: center;
+  min-width: 270px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.accountText {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(70, 73, 79, 1);
+}
+.cartImgContainer {
+  position: absolute;
+  right: 0;
+  width: 24px;
+  height: 24px;
+}
+.cartImg {
+  position: relative;
+}
+.purchaseAmount {
+  position: absolute;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  
+}
