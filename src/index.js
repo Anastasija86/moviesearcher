@@ -1,14 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Layout from "./components/Layout";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import CatalogPage from "./pages/CatalogPage";
+import ContactPage from "./pages/ContactPage";
+import ErrorPage from "./pages/ErrorPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: <ErrorPage/>,
+    children: [
+      {
+        path: "/",
+        element: <HomePage/>
+      },
+      {
+        path: "catalog",
+        element: <CatalogPage/>
+      },
+      {
+        path: "contacts",
+        element: <ContactPage/>
+      }
+    ]
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Layout />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
