@@ -9,6 +9,12 @@ import MainMenu from "./MainMenu";
 
 const Wrapper = styled.div`
   font-family: "Lexend", sans-serif;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 7.75rem;
+  width: 100%;
 `;
 const OfferContainer = styled.div`
   background-color: rgba(5, 66, 44, 1);
@@ -16,22 +22,20 @@ const OfferContainer = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 37px;
-  position: fixed;
-  top: 0;
-  left: 0;
+  height: 1.8 rem;
   width: 100%;
 `;
 const OfferText = styled.p`
   margin: 0;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.7rem;
   width: 100%;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 `;
 const MiddleLayer = styled.div`
-  margin-top: 37px;
-  height: 56px;
+  height: 1.9rem;
   padding: 14px 64px;
   display: flex;
   justify-content: space-between;
@@ -39,29 +43,30 @@ const MiddleLayer = styled.div`
   vertical-align: middle;
 `;
 const Logo = styled.img`
-  width: 270px;
+  width: 15rem;
   cursor: pointer;
 `;
 const AccountWrapper = styled.div`
   text-align: center;
-  min-width: 200px;
-  height: 24px;
+  align-items: center;
+  min-width: 9rem;
+  height: 100%;
   display: flex;
   justify-content: center;
   position: relative;
-`;
-const AccountText = styled.p`
+
   font-size: 14px;
   font-weight: 400;
   color: rgba(70, 73, 79, 1);
   cursor: pointer;
 `;
-const CsrtContainer = styled.div`
+
+const CartContainer = styled.div`
   position: absolute;
   right: 0;
-  width: 24px;
-  height: 24px;
-  top: 8px;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0.5rem;
   cursor: pointer;
 `;
 const CartImg = styled.img`
@@ -75,7 +80,7 @@ const PurchaseAmmount = styled.div`
   border-radius: 50%;
   background-color: rgba(235, 38, 6, 1);
   color: rgba(255, 255, 255, 1);
-  bottom: -12px;
+  bottom: -9px;
   right: -5px;
   font-size: 10px;
   cursor: pointer;
@@ -91,10 +96,10 @@ export default function Header() {
         <Logo src={logo} alt="Logo" />
         <SearchBar />
         <AccountWrapper>
-          <AccountText>Your account</AccountText>
-          <CsrtContainer>
+          Your account
+          <CartContainer>
             <CartImg src={cart} alt="Cart" />
-          </CsrtContainer>
+          </CartContainer>
           <PurchaseAmmount>0</PurchaseAmmount>
         </AccountWrapper>
       </MiddleLayer>
