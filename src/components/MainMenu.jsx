@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { pathBoard } from '../path';
+import { pathBoard } from "../path";
 
 const Wrapper = styled.section`
   border-top: 2px solid rgba(244, 244, 244, 1);
@@ -21,11 +21,20 @@ const Item = styled(Link)`
 `;
 
 export default function MainMenu() {
+  const menuItems = [
+    { name: "Home", path: pathBoard.home },
+    { name: "Catalog", path: pathBoard.catalog },
+    { name: "Contact", path: pathBoard.contact },
+  ];
+
   return (
     <Wrapper>
-      <Item to={pathBoard.home}>Home</Item>
-      <Item to={pathBoard.catalog}>Catalog</Item>
-      <Item to={pathBoard.contact}>Contacts</Item>
+      {menuItems.map((item) => (
+        <Item key={item.name} to={item.path}>
+          {" "}
+          {item.name}{" "}
+        </Item>
+      ))}
     </Wrapper>
   );
 }
