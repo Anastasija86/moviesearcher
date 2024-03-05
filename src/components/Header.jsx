@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import SearchBar from "./SearchBar";
+import SearchBar from "components/SearchBar";
 
-import logo from "../components/assets/headerIcons/Logo.svg";
-import cart from "../components/assets/headerIcons/cart.svg";
-import MainMenu from "./MainMenu";
+import logo from "components/assets/headerIcons/Logo.svg";
+import cart from "components/assets/headerIcons/cart.svg";
+import MainMenu from "components/MainMenu";
 
 const Wrapper = styled.div`
   font-family: "Lexend", sans-serif;

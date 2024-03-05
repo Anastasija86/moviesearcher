@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { pathBoard } from '../path';
+import { pathBoard } from "path";
 
 const Wrapper = styled.section`
   border-top: 2px solid rgba(244, 244, 244, 1);

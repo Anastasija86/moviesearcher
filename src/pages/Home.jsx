@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "../components/uiPrimitives/Button";
+import { Button } from "components/uiPrimitives/Button";
 
 const Wrapper = styled.section`
   background: conic-gradient(
