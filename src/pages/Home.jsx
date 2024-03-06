@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "components/uiPrimitives/Button";
+import { Link } from "react-router-dom";
+import { pathBoard } from "path";
 
 const Wrapper = styled.section`
   background: conic-gradient(
@@ -65,7 +67,9 @@ export default function Home() {
         <Line></Line>
         <TextPromo>Free Shipping</TextPromo>
       </TextWrapper>
-      <Button>Catalog</Button>
+      <Link to={pathBoard.catalog}>
+        <Button>Catalog</Button>
+      </Link>
     </Wrapper>
   );
 }

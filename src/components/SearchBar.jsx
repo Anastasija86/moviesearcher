@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import magnifier from "components/assets/headerIcons/magnifier.svg";
+import magnifier from "assets/headerIcons/magnifier.svg";
 
 const Form = styled.form`
   height: 1.9rem;
