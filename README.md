@@ -1,14 +1,45 @@
 # TOP-SHOP
 
-1. How to setup project?
+### Description
 
-    After cloning the project from the GitLab repository, you need to install all the dependencies and packages required for the project (run npm install).
+---
 
-    Note: You need to install the version of node and npm required for this project (you can find it below).
+Top-shop is an online-shop which provides the ability to search, filter and purchase products.
+It was created to improve the skills of beginning React developers.
 
-    Finally, run npm start to launch the project in the browser.
+> Note: During the development process, we used open moviedatabase [themoviedb.org API](https://www.themoviedb.org/).
 
-2. What version node and npm to use?
+### Environment
 
-node - v20.10.0
-npm - 10.2.3
+---
+
+```sh
+node: 20.10.0
+npm: 10.2.3
+```
+
+### Installation
+
+---
+
+Clone project
+
+```sh
+git clone git@gitlab.com:AnastasiiaKo/top-shop.git
+```
+
+Install dependencies
+
+```sh
+npm ci
+```
+
+### Usage
+
+---
+
+Run project
+
+```sh
+npm start
+```
