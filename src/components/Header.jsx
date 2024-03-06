@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-import SearchBar from "./SearchBar";
+import SearchBar from "components/SearchBar";
+import { pathBoard } from "path";
 
-import logo from "../components/assets/headerIcons/Logo.svg";
-import cart from "../components/assets/headerIcons/cart.svg";
-import MainMenu from "./MainMenu";
+import logo from "assets/headerIcons/logo.svg";
+import cart from "assets/headerIcons/cart.svg";
+import MainMenu from "components/MainMenu";
 
 const Wrapper = styled.div`
   font-family: "Lexend", sans-serif;
@@ -43,7 +45,7 @@ const MiddleLayer = styled.div`
   vertical-align: middle;
 `;
 const Logo = styled.img`
-  width: 15rem;
+  width: 8rem;
   cursor: pointer;
 `;
 const AccountWrapper = styled.div`
@@ -93,12 +95,16 @@ export default function Header() {
         <OfferText>LIMITED OFFER: 30% OFF. Use RABBIT30 at Checkout.</OfferText>
       </OfferContainer>
       <MiddleLayer>
-        <Logo src={logo} alt="Logo" />
+        <Link to={pathBoard.home}>
+          <Logo src={logo} alt="Logo" />
+        </Link>
         <SearchBar />
         <AccountWrapper>
           Your account
           <CartContainer>
-            <CartImg src={cart} alt="Cart" />
+            <Link to={pathBoard.cart}>
+              <CartImg src={cart} alt="Cart" />
+            </Link>
           </CartContainer>
           <PurchaseAmmount>0</PurchaseAmmount>
         </AccountWrapper>
