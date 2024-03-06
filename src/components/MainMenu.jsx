@@ -31,8 +31,7 @@ export default function MainMenu() {
     <Wrapper>
       {menuItems.map((item) => (
         <Item key={item.name} to={item.path}>
-          {" "}
-          {item.name}{" "}
+          {item.name}
         </Item>
       ))}
     </Wrapper>
