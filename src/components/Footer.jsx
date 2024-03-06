@@ -18,6 +18,6 @@ const Text = styled.p`
 
 export default function Footer() {
   return (
-      <Text>© 2022 Top Shelf BC. All Rights Reserved. </Text>
+      <Text>`© ${new Date().getFullYear()} Top Shelf BC. All Rights Reserved.`</Text>
   );
 }

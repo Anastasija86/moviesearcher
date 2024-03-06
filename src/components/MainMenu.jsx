@@ -32,11 +32,19 @@ const Item = styled(NavLink)`
 `;
 
 export default function MainMenu() {
+  const menuItems = [
+    { name: "Home", path: pathBoard.home },
+    { name: "Catalog", path: pathBoard.catalog },
+    { name: "Contact", path: pathBoard.contact },
+  ];
+
   return (
     <Wrapper>
-      <Item to={pathBoard.home}>Home</Item>
-      <Item to={pathBoard.catalog}>Catalog</Item>
-      <Item to={pathBoard.contact}>Contacts</Item>
+      {menuItems.map((item) => (
+        <Item key={item.name} to={item.path}>
+          {item.name}
+        </Item>
+      ))}
     </Wrapper>
   );
 }

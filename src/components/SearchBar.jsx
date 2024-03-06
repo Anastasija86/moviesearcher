@@ -41,13 +41,11 @@ const Magnifier = styled.img`
 `;
 export default function SearchBar() {
   return (
-    <>
       <Form>
         <Input placeholder="Search"></Input>
         <Button type="button">
           <Magnifier src={magnifier} alt="Search button" />
         </Button>
       </Form>
-    </>
   );
 }
