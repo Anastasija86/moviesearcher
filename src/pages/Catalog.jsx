@@ -12,9 +12,7 @@ const Wrapper = styled.div`
   margin-top: 75px;
   padding: 100px 0px 100px 0px;
   height: 100%;
-  width: 100%;
   background-color:#F2F6F4;
-  
   
 `;
 

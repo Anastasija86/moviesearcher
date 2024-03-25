@@ -5,6 +5,7 @@ import { pathBoard } from "path";
 
 const Wrapper = styled.section`
   border-top: 2px solid rgba(244, 244, 244, 1);
+  border-bottom: 2px solid rgba(244, 244, 244, 1);
   padding: 0 4rem;
   display: flex;
   justify-content: space-between;
@@ -36,13 +37,14 @@ export default function MainMenu() {
     { name: "Home", path: pathBoard.home },
     { name: "Catalog", path: pathBoard.catalog },
     { name: "Contact", path: pathBoard.contact },
+    { name: "Product", path: pathBoard.product },
   ];
 
   return (
     <Wrapper>
-      {menuItems.map((item) => (
-        <Item key={item.name} to={item.path}>
-          {item.name}
+      {menuItems.map(({name, path}) => (
+        <Item key={name} to={path}>
+          {name}
         </Item>
       ))}
     </Wrapper>
