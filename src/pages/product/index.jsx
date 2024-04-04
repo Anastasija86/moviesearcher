@@ -43,11 +43,11 @@ function Product() {
   const nestedLink = [
     {
       name: "Actors",
-      path: pathBoard.actors,
+      path: pathBoard.PRODUCT_ACTORS,
     },
     {
       name: "Review",
-      path: pathBoard.reviews,
+      path: pathBoard.PRODUCT_REVIEWS,
     },
   ];
 

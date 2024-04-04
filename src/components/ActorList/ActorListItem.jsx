@@ -2,7 +2,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 
-const ItemList = styled.ul`
+const Wrapper = styled.ul`
   display: flex;
   padding-bottom: 60px;
   overflow-x: auto;
@@ -38,10 +38,10 @@ const ActorRole = styled(ActorName)`
   font-weight: normal;
 `;
 
-function ActorListItem({actors}) {
+function ActorList({actors}) {
     return (
-        <ItemList>
-          {actors?.cast?.map(({ id, profile_path, name, character }) =>
+        <Wrapper>
+          {actors?.map(({ id, profile_path, name, character }) =>
               profile_path ? (
                 <ItemContainer key={id}>
                   <ItemImg
@@ -53,12 +53,12 @@ function ActorListItem({actors}) {
                 </ItemContainer>
               ) : null
             )}
-        </ItemList>
+        </Wrapper>
     )
 };
 
-ActorListItem.propType = {
+ActorList.propType = {
   actors: PropTypes.array
 };
 
-export { ActorListItem };
+export { ActorList };

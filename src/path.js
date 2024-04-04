@@ -7,7 +7,7 @@ import { Contact } from "pages/Contact";
 import { ErrorPage } from "pages/Error";
 import { Cart } from "pages/Cart";
 import { Product } from "pages/product/index";
-import { ActorsList } from "components/ActorList/index";
+import { Actors } from "components/ActorList/index";
 import { Reviews } from "components/Review/index";
 
 export const pathBoard = {
@@ -15,9 +15,9 @@ export const pathBoard = {
   catalog: "/catalog",
   contact: "/contact",
   cart: "/cart",
-  product: "/product",
-  actors: "/product/actors",
-  reviews: "/product/reviews",
+  PRODUCT: "product",
+  PRODUCT_ACTORS: "/product/actors",
+  PRODUCT_REVIEWS: "/product/reviews",
 };
 
 const router = createBrowserRouter([
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: "actors",
-            element: <ActorsList />,
+            element: <Actors />,
           },
           {
             path: "reviews",

@@ -36,7 +36,7 @@ function MainMenu() {
     { name: "Home", path: pathBoard.home },
     { name: "Catalog", path: pathBoard.catalog },
     { name: "Contact", path: pathBoard.contact },
-    { name: "Product", path: pathBoard.product },
+    { name: "Product", path: pathBoard.PRODUCT },
   ];
 
   return (

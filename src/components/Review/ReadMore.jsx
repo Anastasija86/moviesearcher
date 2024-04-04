@@ -42,7 +42,6 @@ function ReadMore({ id, text, amountWords = 36 }) {
             {endText}
           </EndText>
           <ShowMoreButton
-            className="text-violet-400 ml-2"
             role="button"
             tabIndex={0}
             aria-expanded={isExpanded}

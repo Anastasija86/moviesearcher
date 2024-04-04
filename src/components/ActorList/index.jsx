@@ -3,13 +3,13 @@ import { getActorList } from "apis/movies/index";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Spinner } from 'components/uiPrimitives/Spinner';
-import {ActorListItem} from 'components/ActorList/ActorListItem'
+import {ActorList} from 'components/ActorList/ActorListItem'
 
 const Wrapper = styled.div`
   overflow-x: auto;
 `;
 
-function ActorsList() {
+function Actors() {
   const [actors, setActors] = useState({});
 
   async function getActors(id) {
@@ -21,9 +21,9 @@ function ActorsList() {
 
   return (
     <Wrapper>
-      {actors ? <ActorListItem actors={ actors} /> : <Spinner/>}
+      {actors?.cast ? <ActorList actors={ actors.cast} /> : <Spinner/>}
     </Wrapper>
   );
 }
 
-export { ActorsList };
+export { Actors };
