@@ -1,11 +1,7 @@
-import { getActorList } from "api/GetActorsList";
-import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Oval } from "react-loader-spinner";
+import PropTypes from "prop-types";
 
-const Wrapper = styled.div`
-  overflow-x: auto;
-`;
+
 const ItemList = styled.ul`
   display: flex;
   padding-bottom: 60px;
@@ -40,21 +36,12 @@ const ActorName = styled.p`
 `;
 const ActorRole = styled(ActorName)`
   font-weight: normal;
-
 `;
 
-export default function ActorsList() {
-  const [actors, setActors] = useState({});
-  useEffect(() => {
-    getActorList(157336).then((response) => setActors(response));
-  }, []);
-  
-  return (
-    <Wrapper>
-      {actors ? (
+function ActorListItem({actors}) {
+    return (
         <ItemList>
-          {actors.cast &&
-            actors.cast.map(({ id, profile_path, name, character }) =>
+          {actors?.cast?.map(({ id, profile_path, name, character }) =>
               profile_path ? (
                 <ItemContainer key={id}>
                   <ItemImg
@@ -67,17 +54,11 @@ export default function ActorsList() {
               ) : null
             )}
         </ItemList>
-      ) : (
-        <Oval
-          visible={true}
-          height="80"
-          width="80"
-          color="#4fa94d"
-          ariaLabel="oval-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
-        />
-      )}
-    </Wrapper>
-  );
-}
+    )
+};
+
+ActorListItem.propType = {
+  actors: PropTypes.array
+};
+
+export { ActorListItem };

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import contact from "../components/images/contact.jpg";
+import contact from "assets/images/contact.jpg";
 
 const Wrapper = styled.div`
   display: flex;
@@ -146,7 +146,7 @@ const AdressText = styled.p`
 `;
 
 
-export default function Contact() {
+function Contact() {
   return (
     <Wrapper>
       <СontactImg src={contact} alt="leaf" />
@@ -181,4 +181,6 @@ export default function Contact() {
       </ContactWrapper>
     </Wrapper>
   );
-}
+};
+
+export { Contact };

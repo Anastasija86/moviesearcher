@@ -39,7 +39,7 @@ const Magnifier = styled.img`
   width: 0.8rem;
   height: 2rem;
 `;
-export default function SearchBar() {
+function SearchBar() {
   return (
       <Form>
         <Input placeholder="Search"></Input>
@@ -48,4 +48,6 @@ export default function SearchBar() {
         </Button>
       </Form>
   );
-}
+};
+
+export { SearchBar };

@@ -31,8 +31,7 @@ const Item = styled(NavLink)`
     color: rgba(5, 66, 44, 1);
   }
 `;
-
-export default function MainMenu() {
+function MainMenu() {
   const menuItems = [
     { name: "Home", path: pathBoard.home },
     { name: "Catalog", path: pathBoard.catalog },
@@ -49,4 +48,6 @@ export default function MainMenu() {
       ))}
     </Wrapper>
   );
-}
+};
+
+export { MainMenu };

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Button } from "components/uiPrimitives/Button";
 import { Link } from "react-router-dom";
 import { pathBoard } from "path";
-import { getDetailsById } from "api/GetDetailsById";
+import { getDetailsById } from "apis/movies/index";
 
 const Wrapper = styled.section`
   background: conic-gradient(
@@ -55,8 +55,7 @@ const Line = styled.span`
   margin-right: 2rem;
   margin-left: 2rem;
 `;
-
-export default function Home() {
+ function Home() {
   const onClick = () => {
     getDetailsById(1011985);
   };
@@ -71,8 +70,9 @@ export default function Home() {
         <TextPromo>Free Shipping</TextPromo>
       </TextWrapper>
       <Link to={pathBoard.catalog}>
-        <Button onClick={() => onClick()}>Catalog</Button>
+        <Button onClick={onClick}>Catalog</Button>
       </Link>
     </Wrapper>
   );
-}
+};
+export { Home };

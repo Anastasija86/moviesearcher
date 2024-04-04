@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { pathBoard } from "path";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getDetailsById } from "api/GetDetailsById";
+import { getDetailsById } from "apis/movies/index";
 import { BsFillHeartFill } from "react-icons/bs";
 import { FaList } from "react-icons/fa6";
 import { AiFillStar } from "react-icons/ai";
@@ -62,7 +62,6 @@ const IconContainer = styled.div`
   margin: 0 5px;
   cursor: pointer;
   color: white;
-
 `;
 const ProgressBar = styled.div`
   width: 70px;
@@ -112,8 +111,7 @@ const ActionIcons = [
   },
 ];
 
-export default function Product() {
-
+function Product() {
   const nestedLink = [
     {
       name: "Actors",
@@ -126,8 +124,12 @@ export default function Product() {
   ];
 
   const [movieDetails, setMovieDetails] = useState({});
+  async function getMovieDetails(id) {
+    await getDetailsById(id).then((response) => setMovieDetails(response));
+  };
+
   useEffect(() => {
-    getDetailsById(157336).then((response) => setMovieDetails(response));
+    getMovieDetails(157336);
   }, []);
   const {
     poster_path,
@@ -158,7 +160,7 @@ export default function Product() {
         )}
         <GanreContainer>
           {genres &&
-            genres.map(({name}) => (
+            genres.map(({ name }) => (
               <GenreList key={name}>
                 <p>{name}</p>
                 <Dot></Dot>
@@ -194,10 +196,16 @@ export default function Product() {
         <h3>Overview</h3>
         <p>{overview}</p>
         <ChildrenContainer>
-          {nestedLink.map(({name, path}, index)=><NestedLink key={index} to={path}>{name}</NestedLink>)}
+          {nestedLink.map(({ name, path }, index) => (
+            <NestedLink key={index} to={path}>
+              {name}
+            </NestedLink>
+          ))}
         </ChildrenContainer>
         <Outlet />
       </ContantContainer>
     </Wrapper>
   );
-}
+};
+
+export { Product };

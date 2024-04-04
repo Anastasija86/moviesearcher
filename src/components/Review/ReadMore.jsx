@@ -15,7 +15,7 @@ const ShowMoreButton = styled.span`
   margin-left: 10px;
 `;
 
-export default function ReadMore({ id, text, amountWords = 36 }) {
+function ReadMore({ id, text, amountWords = 36 }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const splittedText = text.split(" ");
   const itCanOverflow = splittedText.length > amountWords;
@@ -56,4 +56,6 @@ export default function ReadMore({ id, text, amountWords = 36 }) {
       )}
     </p>
   );
-}
+};
+
+export { ReadMore };
