@@ -70,6 +70,8 @@ const Rating = styled.p`
   letter-spacing: 0px;
 `;
 
+const apiKey = process.env.REACT_APP_API_KEY;
+
 export default function Catalog() {
   const [movies, setMovies] = useState([]);
 
@@ -77,7 +79,7 @@ export default function Catalog() {
     const fetchMovies = async () => {
       try {
         const response = await fetch(
-          "https://api.themoviedb.org/3/movie/popular?api_key=38afe4ec768518a2228d42cf16598485&language=en-US&page=1"
+          `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch movies");
