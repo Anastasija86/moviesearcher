@@ -17,7 +17,6 @@ function LoginForm() {
     { type: 'password', value: userPassword }
   ];
   const currentUser = useCurrentUserData(userEmail, userPassword);
-console.log("currentUser", currentUser)
 
   const handleChange = (e) => {
     const type = e.currentTarget.name;
