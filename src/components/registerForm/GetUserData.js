@@ -8,7 +8,6 @@ function useCurrentUserData(email, password) {
     const currentUser = users.find(
       (user) => user.email === email && user.password === password
     );
-    console.log('UserHook', currentUser)
     return currentUser;
 };
 
