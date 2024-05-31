@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import SearchBar from "components/SearchBar";
+import { SearchBar } from "components/SearchBar";
 import { pathBoard } from "path";
 
 import logo from "assets/headerIcons/logo.svg";
 import cart from "assets/headerIcons/cart.svg";
-import MainMenu from "components/MainMenu";
+import { MainMenu } from "components/MainMenu";
 
 const Wrapper = styled.div`
   font-family: "Lexend", sans-serif;
@@ -87,8 +87,7 @@ const PurchaseAmmount = styled.div`
   font-size: 10px;
   cursor: pointer;
 `;
-
-export default function Header() {
+ function Header() {
   return (
     <Wrapper>
       <OfferContainer>
@@ -112,4 +111,5 @@ export default function Header() {
       <MainMenu />
     </Wrapper>
   );
-}
+};
+export { Header };
