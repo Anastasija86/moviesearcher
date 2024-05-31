@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+ const Button = styled.button`
   background-color: rgba(23, 175, 38, 1);
   border: none;
   padding-block: 0;
@@ -13,3 +13,4 @@ export const Button = styled.button`
   font-size: 16px;
   font-weight: bold;
 `;
+export {Button}

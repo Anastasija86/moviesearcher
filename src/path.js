@@ -6,12 +6,18 @@ import Catalog from "pages/Catalog";
 import Contact from "pages/Contact";
 import Error from "pages/Error";
 import Cart from "pages/Cart";
+import { Registration } from "pages/Registration";
+import { LogIn } from 'pages/LogIn';
+import { FavoriteList } from 'pages/favoriteList/FavoriteList';
 
 export const pathBoard = {
   home: "/",
   catalog: "/catalog",
   contact: "/contact",
   cart: "/cart",
+  registration: "/registration",
+  authentication: "/logIn",
+  favoriteList: '/favoriteList',
 };
 
 const router = createBrowserRouter([
@@ -35,6 +41,18 @@ const router = createBrowserRouter([
       {
         path: "cart",
         element: <Cart />,
+      },
+      {
+        path: "registration",
+        element: <Registration />,
+      },
+      {
+        path: "logIn",
+        element: <LogIn />,
+      },
+      {
+        path: "favoriteList",
+        element: <FavoriteList />,
       },
     ],
   },
