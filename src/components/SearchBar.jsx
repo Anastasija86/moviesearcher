@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import magnifier from "assets/headerIcons/magnifier.svg";
 
@@ -5,7 +6,6 @@ const Form = styled.form`
   height: 1.9rem;
   display: flex;
   width: fit-content;
-  justify-content: ;
   padding-left: 1rem;
 `;
 const Input = styled.input`
@@ -23,7 +23,6 @@ const Input = styled.input`
     border: 1px solid rgba(23, 175, 38, 1);
     outline: none;
     }
-  }
 `;
 const Button = styled.button`
   background-color: rgba(23, 175, 38, 1);
@@ -48,6 +47,6 @@ function SearchBar() {
         </Button>
       </Form>
   );
-};
+}
 
 export { SearchBar };

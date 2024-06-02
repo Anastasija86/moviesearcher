@@ -48,6 +48,6 @@ function MainMenu() {
       ))}
     </Wrapper>
   );
-};
+}
 
 export { MainMenu };

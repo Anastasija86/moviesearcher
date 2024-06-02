@@ -1,3 +1,4 @@
+import React from "react";
 import { useRouteError } from "react-router-dom";
 
 function ErrorPage() {
@@ -13,5 +14,5 @@ function ErrorPage() {
       </p>
     </div>
   );
-};
+}
 export { ErrorPage };

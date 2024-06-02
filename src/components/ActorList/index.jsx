@@ -1,9 +1,9 @@
-import React from "react";
+import  React  from "react";
 import { getActorList } from "apis/movies/index";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Spinner } from 'components/uiPrimitives/Spinner';
-import {ActorList} from 'components/ActorList/ActorListItem'
+import { Spinner } from "components/uiPrimitives/Spinner";
+import { ActorList } from "components/ActorList/ActorListItem";
 
 const Wrapper = styled.div`
   overflow-x: auto;

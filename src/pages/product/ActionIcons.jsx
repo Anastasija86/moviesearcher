@@ -1,11 +1,12 @@
+import React from "react";
 import styled from "styled-components";
 import { GenreList } from "pages/product/Genres";
-import { ProgressBar } from 'pages/product/ProgressScoreIcon';
+import { ProgressBar } from "pages/product/ProgressScoreIcon";
 import { Tooltip } from "react-tooltip";
 import { BsFillHeartFill } from "react-icons/bs";
 import { FaList } from "react-icons/fa6";
 import { AiFillStar } from "react-icons/ai";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Wrapper = styled(GenreList)`
   margin-bottom: 45px;
@@ -52,9 +53,9 @@ function ActionIcons({raiting}) {
         ))}
       </Wrapper>
     );
-};
+}
 
-ActionIcons.propType = {
+ActionIcons.propTypes = {
   raiting: PropTypes.number,
 };
 

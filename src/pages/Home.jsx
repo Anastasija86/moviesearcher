@@ -74,5 +74,5 @@ const Line = styled.span`
       </Link>
     </Wrapper>
   );
-};
+}
 export { Home };

@@ -1,4 +1,4 @@
-import { requstMethods } from 'apis/requestMethods';
+import { requstMethods } from "apis/requestMethods";
 
 async function fetchMovie(url) {
 
@@ -17,9 +17,9 @@ async function fetchMovie(url) {
         const response = await fetch(`${apiUrl}movie/${url}`, options);
         if (!response.ok) {
         
-            throw new Error('Network response was not ok!');
+            throw new Error("Network response was not ok!");
             
-        };
+        }
         const data = await response.json();
         return data;
     } catch (error) {

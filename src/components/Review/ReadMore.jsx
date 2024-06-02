@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
@@ -55,6 +56,12 @@ function ReadMore({ id, text, amountWords = 36 }) {
       )}
     </p>
   );
+}
+
+ReadMore.propTypes = {
+  id: PropTypes.string,
+  text: PropTypes.string,
+  amountWords: PropTypes.number,
 };
 
 export { ReadMore };

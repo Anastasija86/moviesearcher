@@ -1,6 +1,7 @@
+import React from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import styled from "styled-components";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
   width: 70px;
@@ -30,9 +31,9 @@ function ProgressBar({raiting}) {
       <p>User score</p>
     </Wrapper>
   );
-};
+}
 
-ProgressBar.propType = {
+ProgressBar.propTypes = {
     raiting: PropTypes.number,
 };
  export { ProgressBar };
