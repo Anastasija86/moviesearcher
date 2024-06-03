@@ -21,38 +21,40 @@ const CartWrapper = styled.div`
   width: 100%;
 `;
 
-const CartContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 10px 20px;
-  width: 280px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+const CartContainer = styled.li`
+  list-style: none;
+  display: block;
+  margin: 5px 10px;
+  border-radius: 15px;
+  background-color: rgba(244, 244, 244, 1);
+  border: 1px solid rgba(244, 244, 244, 1);
+  padding-bottom: 10px;
+  overflow: hidden;
+  min-width: 140px;
+  width: 160px;
+  height: 346px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 `;
 
 const CartImg = styled.img`
-  width: 280px;
-  height: 400px;
-  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
 `;
 
 const TextName = styled.p`
+  font-size: small;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 5px;
   text-align: center;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  color: #1a1e26;
-  font-weight: 500;
-  font-size: 18px;
-  font-family: Lexend;
-  line-height: 21px;
-  letter-spacing: 0px;
 `;
 
 const TextData = styled.p`
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #9d9ea2;
   font-size: 14px;
   font-family: Lexend;
