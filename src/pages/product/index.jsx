@@ -1,11 +1,12 @@
+import React from "react";
 import styled from "styled-components";
 import { pathBoard } from "path";
 import { NavLink, Outlet} from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getDetailsById } from "apis/movies/index";
-import { Poster } from 'pages/product/Poster';
-import { Genres } from 'pages/product/Genres';
-import { ActionIcons } from 'pages/product/ActionIcons';
+import { Poster } from "pages/product/Poster";
+import { Genres } from "pages/product/Genres";
+import { ActionIcons } from "pages/product/ActionIcons";
 
 const Wrapper = styled.section`
   padding: 1rem 4.5rem;

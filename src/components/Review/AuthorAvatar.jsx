@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -33,7 +34,6 @@ const DefaultImg = styled.div`
   };
 
 function AuthorAvatar({ author, path }) {
-  console.log(path)
   return (
     <Wrapper>
       {path ? (
@@ -48,9 +48,9 @@ function AuthorAvatar({ author, path }) {
       )}
     </Wrapper>
   );
-};
+}
 
-AuthorAvatar.propType = {
+AuthorAvatar.propTypes = {
   author: PropTypes.string,
   path: PropTypes.string
 };

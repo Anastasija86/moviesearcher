@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import React from "react";
 
 
 const Wrapper = styled.ul`
@@ -32,33 +33,35 @@ const ActorName = styled.p`
   font-size: small;
   font-weight: bold;
   margin-top: 10px;
+  padding: 5px;
   text-align: center;
 `;
 const ActorRole = styled(ActorName)`
   font-weight: normal;
+  padding: 5px;
 `;
 
 function ActorList({actors}) {
-    return (
-        <Wrapper>
-          {actors?.map(({ id, profile_path, name, character }) =>
-              profile_path ? (
-                <ItemContainer key={id}>
-                  <ItemImg
-                    src={`https://image.tmdb.org/t/p/w500${profile_path}`}
-                    alt="Actor"
-                  />
-                  <ActorName>{name}</ActorName>
-                  <ActorRole>{character}</ActorRole>
-                </ItemContainer>
-              ) : null
-            )}
-        </Wrapper>
-    )
-};
+  return (
+    <Wrapper>
+      {actors?.map(({ id, profile_path, name, character }) =>
+        profile_path ? (
+          <ItemContainer key={id}>
+            <ItemImg
+              src={`https://image.tmdb.org/t/p/w500${profile_path}`}
+              alt="Actor"
+            />
+            <ActorName>{name}</ActorName>
+            <ActorRole>{character}</ActorRole>
+          </ItemContainer>
+        ) : null
+      )}
+    </Wrapper>
+  );
+}
 
-ActorList.propType = {
-  actors: PropTypes.array
+ActorList.propTypes = {
+  actors: PropTypes.array,
 };
 
 export { ActorList };

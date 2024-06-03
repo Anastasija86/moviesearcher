@@ -181,6 +181,6 @@ function Contact() {
       </ContactWrapper>
     </Wrapper>
   );
-};
+}
 
 export { Contact };

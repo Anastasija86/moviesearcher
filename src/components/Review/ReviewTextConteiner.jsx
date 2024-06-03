@@ -1,3 +1,4 @@
+import React from "react";
 import { ReadMore } from "components/Review/ReadMore";
 import PropTypes from "prop-types";
 import styled from "styled-components";
@@ -48,9 +49,9 @@ function ReviewTextContainer({ id, author, rating, content }) {
       <ReadMore id={id} text={content}></ReadMore>
     </TextContainer>
   );
-};
+}
 
-ReviewTextContainer.propType = {
+ReviewTextContainer.propTypes = {
   id: PropTypes.string,
   author: PropTypes.string,
   rating: PropTypes.number,

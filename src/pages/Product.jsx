@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { pathBoard } from "path";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
@@ -126,7 +127,7 @@ function Product() {
   const [movieDetails, setMovieDetails] = useState({});
   async function getMovieDetails(id) {
     await getDetailsById(id).then((response) => setMovieDetails(response));
-  };
+  }
 
   useEffect(() => {
     getMovieDetails(157336);
@@ -206,6 +207,6 @@ function Product() {
       </ContantContainer>
     </Wrapper>
   );
-};
+}
 
 export { Product };

@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import "react-circular-progressbar/dist/styles.css";
@@ -22,9 +23,9 @@ function Poster({path}) {
       />
     </Wrapper>
   );
-};
+}
 
-Poster.propType = {
+Poster.propTypes = {
   path: PropTypes.string,
 };
 

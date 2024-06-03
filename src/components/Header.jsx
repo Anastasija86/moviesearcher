@@ -111,5 +111,5 @@ const PurchaseAmmount = styled.div`
       <MainMenu />
     </Wrapper>
   );
-};
+}
 export { Header };

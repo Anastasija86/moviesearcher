@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { getTimeConverter } from './getTimeConvert';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { getTimeConverter } from "./getTimeConvert";
 
 const GenreList = styled.div`
   display: flex;
@@ -33,8 +34,8 @@ function Genres({genres, runtime}) {
         {runtime && <p>{getTimeConverter(runtime)}</p>}
       </Wrapper>
     );
-};
-Genres.propType = {
+}
+Genres.propTypes = {
   genres: PropTypes.array,
   runtime: PropTypes.number
 };

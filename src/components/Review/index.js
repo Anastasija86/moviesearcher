@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { getReviews } from "apis/movies/index";
 import styled from "styled-components";
@@ -5,7 +6,7 @@ import { AuthorAvatar } from "components/Review/AuthorAvatar";
 import { getCompare } from "./getCompareDate";
 import { getDate } from "./getDate";
 import { Spinner } from "components/uiPrimitives/Spinner";
-import { ReviewTextContainer } from 'components/Review/ReviewTextConteiner';
+import { ReviewTextContainer } from "components/Review/ReviewTextConteiner";
 
 const Wrapper = styled.section`
   height: 100%;

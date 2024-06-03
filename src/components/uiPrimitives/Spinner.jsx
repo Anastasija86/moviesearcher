@@ -1,3 +1,4 @@
+import React from "react";
 import { Oval } from "react-loader-spinner";
 
 function Spinner() {
@@ -12,5 +13,5 @@ function Spinner() {
       wrapperClass=""
     />
   );
-};
+}
 export { Spinner };
