@@ -1,11 +1,11 @@
+import React from "react";
 import styled from "styled-components";
-import magnifier from "../components/assets/headerIcons/magnifier.svg";
+import magnifier from "assets/headerIcons/magnifier.svg";
 
 const Form = styled.form`
   height: 1.9rem;
   display: flex;
   width: fit-content;
-  justify-content: ;
   padding-left: 1rem;
 `;
 const Input = styled.input`
@@ -23,7 +23,6 @@ const Input = styled.input`
     border: 1px solid rgba(23, 175, 38, 1);
     outline: none;
     }
-  }
 `;
 const Button = styled.button`
   background-color: rgba(23, 175, 38, 1);
@@ -39,15 +38,15 @@ const Magnifier = styled.img`
   width: 0.8rem;
   height: 2rem;
 `;
-export default function SearchBar() {
+function SearchBar() {
   return (
-    <>
       <Form>
         <Input placeholder="Search"></Input>
         <Button type="button">
           <Magnifier src={magnifier} alt="Search button" />
         </Button>
       </Form>
-    </>
   );
 }
+
+export { SearchBar };

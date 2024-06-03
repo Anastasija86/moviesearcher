@@ -113,3 +113,4 @@ export default function Catalog() {
     </Wrapper>
   );
 }
+export { Catalog };

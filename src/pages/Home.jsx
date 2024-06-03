@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "../components/uiPrimitives/Button";
+import { Button } from "components/uiPrimitives/Button";
+import { Link } from "react-router-dom";
+import { pathBoard } from "path";
+import { getDetailsById } from "apis/movies/index";
 
 const Wrapper = styled.section`
   background: conic-gradient(
@@ -10,7 +13,6 @@ const Wrapper = styled.section`
     rgba(5, 66, 44, 1)
   );
   height: 100%;
-  width: 100%;
   padding: 3rem 4.5rem;
   margin-top: 7.85rem;
 `;
@@ -53,8 +55,10 @@ const Line = styled.span`
   margin-right: 2rem;
   margin-left: 2rem;
 `;
-
-export default function Home() {
+ function Home() {
+  const onClick = () => {
+    getDetailsById(1011985);
+  };
   return (
     <Wrapper>
       <BestSeller>BEST SELLER</BestSeller>
@@ -65,7 +69,10 @@ export default function Home() {
         <Line></Line>
         <TextPromo>Free Shipping</TextPromo>
       </TextWrapper>
-      <Button>Catalog</Button>
+      <Link to={pathBoard.catalog}>
+        <Button onClick={onClick}>Catalog</Button>
+      </Link>
     </Wrapper>
   );
 }
+export { Home };
