@@ -21,23 +21,23 @@ const Dot = styled.span`
   border-radius: 50px;
 `;
 
-function Genres({genres, runtime}) {
-    return (
-      <Wrapper>
-        {genres &&
-          genres.map(({ name }) => (
-            <GenreList key={name}>
-              <p>{name}</p>
-              <Dot></Dot>
-            </GenreList>
-          ))}
-        {runtime && <p>{getTimeConverter(runtime)}</p>}
-      </Wrapper>
-    );
+function Genres({ genres, runtime }) {
+  return (
+    <Wrapper>
+      {genres &&
+        genres.map(({ name }) => (
+          <GenreList key={name}>
+            <p>{name}</p>
+            <Dot></Dot>
+          </GenreList>
+        ))}
+      {runtime && <p>{getTimeConverter(runtime)}</p>}
+    </Wrapper>
+  );
 }
 Genres.propTypes = {
   genres: PropTypes.array,
-  runtime: PropTypes.number
+  runtime: PropTypes.number,
 };
 
 export { Genres, GenreList };

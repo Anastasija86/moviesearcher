@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
 import { SearchBar } from "components/SearchBar";
 import { pathBoard } from "path";
-
-import logo from "assets/headerIcons/logo.svg";
+import { FcVideoCall } from "react-icons/fc";
 import cart from "assets/headerIcons/cart.svg";
 import { MainMenu } from "components/MainMenu";
 
@@ -17,6 +15,8 @@ const Wrapper = styled.div`
   left: 0;
   height: 7.75rem;
   width: 100%;
+  z-index: 1000;
+  overflow: hidden;
 `;
 const OfferContainer = styled.div`
   background-color: rgba(5, 66, 44, 1);
@@ -29,7 +29,7 @@ const OfferContainer = styled.div`
 `;
 const OfferText = styled.p`
   margin: 0;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.811);
   font-weight: 400;
   font-size: 0.7rem;
   width: 100%;
@@ -44,10 +44,6 @@ const MiddleLayer = styled.div`
   text-align: center;
   vertical-align: middle;
 `;
-const Logo = styled.img`
-  width: 8rem;
-  cursor: pointer;
-`;
 const AccountWrapper = styled.div`
   text-align: center;
   align-items: center;
@@ -56,13 +52,11 @@ const AccountWrapper = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-
   font-size: 14px;
   font-weight: 400;
   color: rgba(70, 73, 79, 1);
   cursor: pointer;
 `;
-
 const CartContainer = styled.div`
   position: absolute;
   right: 0;
@@ -87,15 +81,16 @@ const PurchaseAmmount = styled.div`
   font-size: 10px;
   cursor: pointer;
 `;
- function Header() {
+
+function Header() {
   return (
     <Wrapper>
       <OfferContainer>
-        <OfferText>LIMITED OFFER: 30% OFF. Use RABBIT30 at Checkout.</OfferText>
+        <OfferText>Find your movie among millions here...</OfferText>
       </OfferContainer>
       <MiddleLayer>
         <Link to={pathBoard.home}>
-          <Logo src={logo} alt="Logo" />
+          <FcVideoCall size={30} />
         </Link>
         <SearchBar />
         <AccountWrapper>

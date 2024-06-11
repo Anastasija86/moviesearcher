@@ -18,12 +18,10 @@ const Item = styled(NavLink)`
   color: rgba(70, 73, 79, 1);
   cursor: pointer;
   text-decoration: none;
-
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   margin-left: auto;
   margin-right: auto;
-
   &:hover,
   &:focus,
   &.active {
@@ -31,17 +29,17 @@ const Item = styled(NavLink)`
     color: rgba(5, 66, 44, 1);
   }
 `;
+
 function MainMenu() {
   const menuItems = [
-    { name: "Home", path: pathBoard.home },
-    { name: "Catalog", path: pathBoard.catalog },
-    { name: "Contact", path: pathBoard.contact },
-    { name: "Product", path: pathBoard.PRODUCT },
+    { name: "Popular", path: pathBoard.home },
+    { name: "Top Rated", path: pathBoard.topRaited },
+    { name: "Upcoming", path: pathBoard.upcoming },
   ];
 
   return (
     <Wrapper>
-      {menuItems.map(({name, path}) => (
+      {menuItems.map(({ name, path }) => (
         <Item key={name} to={path}>
           {name}
         </Item>

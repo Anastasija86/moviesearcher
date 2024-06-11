@@ -2,23 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 const Text = styled.p`
-  color: rgba(113, 115, 120, 1);
+  color: rgba(255, 255, 255, 0.811);
   font-size: 16px;
   display: flex;
   align-items: center;
-
   vertical-align: middle;
-  background-color: rgba(26, 30, 38, 1);
-  height: 3rem;
-  position: fixed;
+  background-color: rgba(5, 66, 44, 1);
+  height: 1.75rem;
   bottom: 0;
   width: 100%;
   padding-left: 4rem;
 `;
 
- function Footer() {
-  return (
-      <Text>© ${new Date().getFullYear()} Top Shelf BC. All Rights Reserved.</Text>
-  );
+function Footer() {
+  return <Text>©{new Date().getFullYear()} </Text>;
 }
 export { Footer };

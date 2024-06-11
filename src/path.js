@@ -1,23 +1,22 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "components/Layout";
-import { Home } from "pages/Home";
-import { Catalog } from "pages/Catalog";
-import { Contact } from "pages/Contact";
+import { Popular } from "pages/Popular";
+import { TopRated } from "pages/TopRated";
+import { Upcoming } from "pages/Upcoming";
 import { ErrorPage } from "pages/Error";
-import { Cart } from "pages/Cart";
+import { Search } from "pages/Search";
 import { Product } from "pages/product/index";
 import { Actors } from "components/ActorList/index";
 import { Reviews } from "components/Review/index";
 
 export const pathBoard = {
   home: "/",
-  catalog: "/catalog",
+  topRaited: "/topRaited",
+  upcoming: "/upcoming",
   contact: "/contact",
-  cart: "/cart",
-  PRODUCT: "product",
-  PRODUCT_ACTORS: "/product/actors",
-  PRODUCT_REVIEWS: "/product/reviews",
+  search: "/search",
+  PRODUCT: "/product",
 };
 
 const router = createBrowserRouter([
@@ -28,22 +27,10 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Popular />,
       },
       {
-        path: "catalog",
-        element: <Catalog />,
-      },
-      {
-        path: "contact",
-        element: <Contact />,
-      },
-      {
-        path: "cart",
-        element: <Cart />,
-      },
-      {
-        path: "product",
+        path: "product/:productId",
         element: <Product />,
         children: [
           {
@@ -55,6 +42,18 @@ const router = createBrowserRouter([
             element: <Reviews />,
           },
         ],
+      },
+      {
+        path: "topRaited",
+        element: <TopRated />,
+      },
+      {
+        path: "upcoming",
+        element: <Upcoming />,
+      },
+      {
+        path: "search/:name",
+        element: <Search />,
       },
     ],
   },

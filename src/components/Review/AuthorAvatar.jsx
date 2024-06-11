@@ -28,10 +28,10 @@ const DefaultImg = styled.div`
   justify-content: center;
 `;
 
-  const getRandomColor = () => {
-    let n = (Math.random() * 0xfffff * 1000000).toString(16);
-    return "#" + n.slice(0, 6);
-  };
+const getRandomColor = () => {
+  let n = (Math.random() * 0xfffff * 1000000).toString(16);
+  return "#" + n.slice(0, 6);
+};
 
 function AuthorAvatar({ author, path }) {
   return (
@@ -52,8 +52,7 @@ function AuthorAvatar({ author, path }) {
 
 AuthorAvatar.propTypes = {
   author: PropTypes.string,
-  path: PropTypes.string
+  path: PropTypes.string,
 };
-
 
 export { AuthorAvatar };
