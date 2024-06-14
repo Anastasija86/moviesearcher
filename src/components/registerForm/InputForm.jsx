@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Input } from "components/SearchBar";
 import { Link } from "react-router-dom";
-import { Button } from "../uiPrimitives/Button";
+import { Button } from "components/uiPrimitives/Button";
+import PropTypes from "prop-types";
 
 const Wrapper = styled.form`
   border: 1px solid rgb(234, 232, 232);
@@ -54,40 +55,42 @@ const Label = styled.label`
 
 function InputForm({
   params,
-  handleChange,
   handleSubmit,
   title,
   button,
   questionText,
-    authorizationType,
-    link,
+  authorizationType,
+  link,
 }) {
-  const getUpperCaseParam = (param) => {
-    const firstUpperLetter = param[0].toUpperCase();
-    const newParam = firstUpperLetter + param.slice(1);
-    return newParam;
+  const capitalize = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   };
+
   return (
-    <Wrapper onSubmit={(e) => handleSubmit(e)}>
+    <Wrapper onSubmit={handleSubmit}>
       <Title>{title}</Title>
       {params.map((param) => (
-        <Label key={param.type}>
-          {getUpperCaseParam(param.type)}
-          <FormItem
-            type={param.type === "name" ? "text" : param.type}
-            name={param.type}
-            onChange={(e) => handleChange(e)}
-            value={param.value}
-          />
+        <Label key={param}>
+          {capitalize(param)}
+          <FormItem type={param === "name" ? "text" : param} name={param} />
         </Label>
       ))}
       <RegisterButton>
         <Button type="submit">{button}</Button>
       </RegisterButton>
-      <Text>{questionText}?</Text>
+      <Text>{questionText}</Text>
       <LogInLink to={link}>{authorizationType}</LogInLink>
     </Wrapper>
   );
 }
+InputForm.propTypes = {
+  params: PropTypes.array.isRequired,
+  handleSubmit: PropTypes.func,
+  title: PropTypes.string,
+  button: PropTypes.string,
+  questionText: PropTypes.string,
+  authorizationType: PropTypes.string,
+  link: PropTypes.string,
+};
 
 export { InputForm };

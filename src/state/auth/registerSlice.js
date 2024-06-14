@@ -1,13 +1,19 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
-
 const initialState = {
-  users: [{ id: '12345', name: "Ivan", email: "ivan@gmail.com", password: "1234567890" }],
+  users: [
+    {
+      id: "12345",
+      name: "Ivan",
+      email: "ivan@gmail.com",
+      password: "1234567890",
+    },
+  ],
   currentUser: {},
   isLoggedIn: false,
 };
 
-export const registerSlice = createSlice({
+const registerSlice = createSlice({
   name: "register",
   initialState,
   reducers: {
@@ -24,13 +30,13 @@ export const registerSlice = createSlice({
       const newUser = {
         id: action.payload.id,
         name: action.payload.name,
-        email: action.payload.email
+        email: action.payload.email,
       };
-      state.currentUser= newUser;
+      state.currentUser = newUser;
     },
     toggleIsLoggedIn: (state, action) => {
-      state.isLoggedIn = action.payload
-    }
+      state.isLoggedIn = action.payload;
+    },
   },
 });
 

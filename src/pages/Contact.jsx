@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+<<<<<<< HEAD
 import contact from "assets/images/contact.jpg";
+=======
+import contact from "components/images/contact.jpg";
+>>>>>>> 99dac7c (fixed comments)
 
 const Wrapper = styled.div`
   display: flex;
