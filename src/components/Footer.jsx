@@ -15,15 +15,11 @@ const Text = styled.p`
   padding-left: 4rem;
 `;
 
- function Footer() {
+function Footer() {
   return (
-<<<<<<< HEAD
-      <Text>© ${new Date().getFullYear()} Top Shelf BC. All Rights Reserved.</Text>
-=======
     <Text>
-      `© ${new Date().getFullYear()} Top Shelf BC. All Rights Reserved.`
+      © ${new Date().getFullYear()} Top Shelf BC. All Rights Reserved.
     </Text>
->>>>>>> 99dac7c (fixed comments)
   );
 }
 export { Footer };

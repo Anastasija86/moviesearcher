@@ -1,6 +1,5 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-<<<<<<< HEAD
 import { Layout } from "components/Layout";
 import { Home } from "pages/Home";
 import { Catalog } from "pages/Catalog";
@@ -10,14 +9,6 @@ import { Cart } from "pages/Cart";
 import { Product } from "pages/product/index";
 import { Actors } from "components/ActorList/index";
 import { Reviews } from "components/Review/index";
-=======
-import Layout from "components/Layout";
-import Home from "pages/Home";
-import Catalog from "pages/Catalog";
-import Contact from "pages/Contact";
-import Error from "pages/Error";
-import Cart from "pages/Cart";
->>>>>>> 99dac7c (fixed comments)
 import { Registration } from "pages/Registration";
 import { LogIn } from "pages/LogIn";
 import { FavoriteList } from "pages/favoriteList/FavoriteList";

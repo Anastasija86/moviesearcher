@@ -6,7 +6,7 @@ import { pathBoard } from "path";
 import { getIsLogedIn, getCurrentUserName } from "state/selectors/users";
 import logo from "assets/headerIcons/logo.svg";
 import cart from "assets/headerIcons/cart.svg";
-import MainMenu from "components/MainMenu";
+import { MainMenu } from "components/MainMenu";
 import { useSelector } from "react-redux";
 
 const Wrapper = styled.div`
@@ -98,14 +98,8 @@ const PurchaseAmmount = styled.div`
 `;
 
 export default function Header() {
-<<<<<<< HEAD
-  const isLoggedIn = useSelector((state) => state.register.isLoggedIn);
-  const userName = useSelector((state) => state.register.currentUser.name);
-
-=======
   const isLoggedIn = useSelector(getIsLogedIn);
   const userName = useSelector(getCurrentUserName);
->>>>>>> 99dac7c (fixed comments)
   return (
     <Wrapper>
       <OfferContainer>
