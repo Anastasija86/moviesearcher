@@ -6,7 +6,6 @@ const Text = styled.p`
   font-size: 16px;
   display: flex;
   align-items: center;
-
   vertical-align: middle;
   background-color: rgba(26, 30, 38, 1);
   height: 3rem;
@@ -18,6 +17,8 @@ const Text = styled.p`
 
 export default function Footer() {
   return (
-      <Text>`© ${new Date().getFullYear()} Top Shelf BC. All Rights Reserved.`</Text>
+    <Text>
+      `© ${new Date().getFullYear()} Top Shelf BC. All Rights Reserved.`
+    </Text>
   );
 }

@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-
 import Layout from "components/Layout";
 import Home from "pages/Home";
 import Catalog from "pages/Catalog";
@@ -7,8 +6,8 @@ import Contact from "pages/Contact";
 import Error from "pages/Error";
 import Cart from "pages/Cart";
 import { Registration } from "pages/Registration";
-import { LogIn } from 'pages/LogIn';
-import { FavoriteList } from 'pages/favoriteList/FavoriteList';
+import { LogIn } from "pages/LogIn";
+import { FavoriteList } from "pages/favoriteList/FavoriteList";
 
 export const pathBoard = {
   home: "/",
@@ -17,7 +16,7 @@ export const pathBoard = {
   cart: "/cart",
   registration: "/registration",
   authentication: "/logIn",
-  favoriteList: '/favoriteList',
+  favoriteList: "/favoriteList",
 };
 
 const router = createBrowserRouter([

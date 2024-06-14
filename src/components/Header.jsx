@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
 import { SearchBar } from "components/SearchBar";
 import { pathBoard } from "path";
-
+import { getIsLogedIn, getCurrentUserName } from "state/selectors/users";
 import logo from "assets/headerIcons/logo.svg";
 import cart from "assets/headerIcons/cart.svg";
 import MainMenu from "components/MainMenu";
@@ -73,7 +72,6 @@ const AccountWrapper = styled(Link)`
   }
   cursor: pointer;
 `;
-
 const CartContainer = styled.div`
   position: absolute;
   right: 0;
@@ -100,8 +98,8 @@ const PurchaseAmmount = styled.div`
 `;
 
 export default function Header() {
-  const isLoggedIn = useSelector((state) => state.register.isLoggedIn);
-  const userName = useSelector((state) => state.register.currentUser.name);
+  const isLoggedIn = useSelector(getIsLogedIn);
+  const userName = useSelector(getCurrentUserName);
   return (
     <Wrapper>
       <OfferContainer>
