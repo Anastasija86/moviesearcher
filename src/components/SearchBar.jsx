@@ -56,10 +56,10 @@ function SearchBar() {
     setMovieName("");
   };
   return (
-    <Form onSubmit={(e) => handleSubmit(e)}>
+    <Form onSubmit={handleSubmit}>
       <Input
         placeholder="Search"
-        onChange={(e) => handleChange(e)}
+        onChange={handleChange}
         value={movieName}
       ></Input>
       <Button type="submit">

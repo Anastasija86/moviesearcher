@@ -85,7 +85,7 @@ MovieItem.displayName = "MovieItem";
 MovieItem.propTypes = {
   movie: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    poster_path: PropTypes.string.isRequired,
+    poster_path: PropTypes.string,
     title: PropTypes.string.isRequired,
     release_date: PropTypes.string.isRequired,
     vote_average: PropTypes.number.isRequired,
