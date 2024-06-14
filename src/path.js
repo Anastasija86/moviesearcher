@@ -15,9 +15,9 @@ export const pathBoard = {
   catalog: "/catalog",
   contact: "/contact",
   cart: "/cart",
-  PRODUCT: "product",
-  PRODUCT_ACTORS: "/product/actors",
-  PRODUCT_REVIEWS: "/product/reviews",
+  registration: "/registration",
+  authentication: "/logIn",
+  favoriteList: "/favoriteList",
 };
 
 const router = createBrowserRouter([
@@ -43,18 +43,16 @@ const router = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path: "product",
-        element: <Product />,
-        children: [
-          {
-            path: "actors",
-            element: <Actors />,
-          },
-          {
-            path: "reviews",
-            element: <Reviews />,
-          },
-        ],
+        path: "registration",
+        element: <Registration />,
+      },
+      {
+        path: "logIn",
+        element: <LogIn />,
+      },
+      {
+        path: "favoriteList",
+        element: <FavoriteList />,
       },
     ],
   },

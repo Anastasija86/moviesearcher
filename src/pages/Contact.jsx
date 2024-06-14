@@ -8,8 +8,6 @@ const Wrapper = styled.div`
   height: 100%;
   background-color:#F2F6F4;
   padding: 155px 0px 50px 50px;
-
-  
 `;
 
 const СontactImg = styled.img`
@@ -20,36 +18,27 @@ const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 200px;
-  
-
 `;
 
 const ContactTitle = styled.h1`
-
   color: #000000; 
   font-weight: 400;
   font-size: 60px;
   font-family: Lexend;
   letter-spacing: 0px;
-
 `;
 const FormWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-
 `;
-
-
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   width: 300px;
 `;
-
 const FormGroup = styled.div`
   margin-bottom: 20px;
 `;
-
 const Label = styled.label`
   color: #000000;
   font-weight: 500;
@@ -57,7 +46,6 @@ const Label = styled.label`
   font-family: Lexend;
   letter-spacing: 0px;
 `;
-
 const Input = styled.input`
   width: 100%;
   padding: 5px 0;
@@ -66,7 +54,6 @@ const Input = styled.input`
   border-bottom: 1px solid #000000;
   background: none;
 `;
-
 const TextArea = styled.textarea`
   width: 100%;
   padding: 5px 0;
@@ -76,7 +63,6 @@ const TextArea = styled.textarea`
   background: none;
   resize: none; 
 `;
-
 const Button = styled.button`
   padding: 0px, 24px, 0px, 24px;
   background-color: #17AF26;
@@ -93,17 +79,13 @@ const Button = styled.button`
   letter-spacing: 0px;
   align-self: center;
 `;
-
 const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 100px;
   justify-content: flex-start;
-  
 `;
-
 const MailTitle = styled.p`
-
   color: #000000; 
   font-weight: 500;
   font-size: 20px; 
@@ -111,10 +93,7 @@ const MailTitle = styled.p`
   line-height: 21px;
   letter-spacing: 0px;
   margin-top: 20px;
-  
 `;
-
-
 const MailText = styled.p`
   color: #000000; 
   font-weight: 300;
@@ -124,7 +103,6 @@ const MailText = styled.p`
   letter-spacing: 0px;
   margin-bottom: 30px;
 `;
-
 const AdressTitle = styled.p`
   color: #000000; 
   font-weight: 500;
@@ -132,7 +110,6 @@ const AdressTitle = styled.p`
   font-family: Lexend;
   line-height: 21px;
   letter-spacing: 0px;
-  
 `;
 
 const AdressText = styled.p`
@@ -142,9 +119,7 @@ const AdressText = styled.p`
   font-family: Lexend;
   line-height: 21px;
   letter-spacing: 0px;
-  
 `;
-
 
 function Contact() {
   return (

@@ -6,7 +6,6 @@ const Text = styled.p`
   font-size: 16px;
   display: flex;
   align-items: center;
-
   vertical-align: middle;
   background-color: rgba(26, 30, 38, 1);
   height: 3rem;
