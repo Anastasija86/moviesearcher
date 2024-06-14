@@ -1,6 +1,6 @@
-import { LoginForm } from 'components/registerForm/LoginForm';
-import React from 'react';
-import styled from 'styled-components';
+import { LoginForm } from "components/registerForm/LoginForm";
+import React from "react";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 3rem 4.5rem;
@@ -13,9 +13,9 @@ const Wrapper = styled.div`
 function LogIn() {
   return (
     <Wrapper>
-      <LoginForm/>
+      <LoginForm />
     </Wrapper>
-  )
+  );
 }
 
 export { LogIn };

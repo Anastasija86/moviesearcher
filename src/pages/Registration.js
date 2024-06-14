@@ -1,3 +1,4 @@
+import React from "react";
 import { RegisterForm } from "components/registerForm/RegisterForm";
 import styled from "styled-components";
 

@@ -7,6 +7,7 @@ import { getIsLogedIn, getCurrentUserName } from "state/selectors/users";
 import logo from "assets/headerIcons/logo.svg";
 import cart from "assets/headerIcons/cart.svg";
 import { MainMenu } from "components/MainMenu";
+import { useSelector } from "react-redux";
 
 const Wrapper = styled.div`
   font-family: "Lexend", sans-serif;

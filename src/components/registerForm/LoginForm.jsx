@@ -1,3 +1,4 @@
+import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { pathBoard } from "path";
@@ -14,6 +15,7 @@ const defaultForm = {
 function LoginForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  // eslint-disable-next-line
   const [userForm, setUserForm] = useState(defaultForm);
   const currentUser = useCurrentUserData(userForm.userForm, userForm.email);
 
