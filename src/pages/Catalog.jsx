@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   padding: 100px 0px 100px 0px;
   height: 100%;
   width: 100%;
-  background-color:#F2F6F4;
+  background-color: #f2f6f4;
 `;
 const CartWrapper = styled.div`
   display: flex;
@@ -57,12 +57,11 @@ const CartContainer = styled.div`
   align-items: center;
   width: 280px;
   height: 400px;
-  `;
+`;
 const CartImg = styled.img`
   width: 280px;
   height: 240px;
-  
-  `;
+`;
 const TextCategory = styled.p`
   margin-top: 15px;
   text-align: center;
@@ -72,9 +71,7 @@ const TextCategory = styled.p`
   font-family: Lexend;
   line-height: 21px;
   letter-spacing: 0px;
-
-
-  `;
+`;
 const TextCart = styled.h3`
   text-align: center;
   color: #1a1e26;
@@ -83,26 +80,25 @@ const TextCart = styled.h3`
   line-height: 27px;
   font-family: Lexend;
   letter-spacing: 0px;
-  `;
+`;
 
-  const Button = styled.button`
+const Button = styled.button`
   padding: 0px, 24px, 0px, 24px;
-  background-color: #17AF26;
+  background-color: #17af26;
   border: none;
   cursor: pointer;
   width: 128px;
   height: 40px;
   border-radius: 100px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Lexend;
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
   letter-spacing: 0px;
-  `;
+`;
 
- function Catalog() {
-
+function Catalog() {
   return (
     <Wrapper>
       <CartWrapper>
