@@ -8,7 +8,7 @@ const Form = styled.form`
   width: fit-content;
   padding-left: 1rem;
 `;
-const Input = styled.input`
+export const Input = styled.input`
   border: 1px solid rgb(234, 232, 232);
   border-radius: 25px;
   width: max-content;
@@ -38,6 +38,7 @@ const Magnifier = styled.img`
   width: 0.8rem;
   height: 2rem;
 `;
+
 function SearchBar() {
   return (
       <Form>

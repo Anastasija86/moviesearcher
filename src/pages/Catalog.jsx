@@ -11,37 +11,23 @@ const Wrapper = styled.div`
   width: 100%;
   background-color: #f2f6f4;
 `;
-
 const CartWrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px;
-  max-width: 1200px;
-  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
 `;
 
-const CartContainer = styled.li`
-  list-style: none;
-  display: block;
-  margin: 5px 10px;
-  border-radius: 15px;
-  background-color: rgba(244, 244, 244, 1);
-  border: 1px solid rgba(244, 244, 244, 1);
-  padding-bottom: 10px;
-  overflow: hidden;
-  min-width: 140px;
-  width: 160px;
-  height: 346px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+const CartContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 280px;
+  height: 400px;
 `;
-
 const CartImg = styled.img`
-  width: 100%;
-  height: 70%;
-  object-fit: cover;
+  width: 280px;
+  height: 240px;
 `;
 
 const TextName = styled.p`
@@ -68,8 +54,6 @@ const Rating = styled.p`
   color: #1a1e26;
   font-weight: 500;
   font-size: 12px;
-  font-family: Lexend;
-  letter-spacing: 0px;
 `;
 
 const apiKey = process.env.REACT_APP_API_KEY;
@@ -113,4 +97,5 @@ export default function Catalog() {
     </Wrapper>
   );
 }
+
 export { Catalog };
