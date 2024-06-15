@@ -9,6 +9,11 @@ import { Search } from "pages/Search";
 import { Product } from "pages/product/index";
 import { Actors } from "components/ActorList/index";
 import { Reviews } from "components/Review/index";
+import { Cart } from "pages/Cart";
+import { Registration } from "pages/Registration";
+import { LogIn } from "pages/LogIn";
+import { FavoriteList } from "pages/favoriteList/FavoriteList";
+
 
 export const pathBoard = {
   home: "/",
@@ -17,6 +22,12 @@ export const pathBoard = {
   contact: "/contact",
   search: "/search",
   PRODUCT: "/product",
+  cart: "/cart",
+  PRODUCT_ACTORS: "/product/actors",
+  PRODUCT_REVIEWS: "/product/reviews",
+  registration: "/registration",
+  authentication: "/logIn",
+  favoriteList: "/favoriteList",
 };
 
 const router = createBrowserRouter([
@@ -42,6 +53,23 @@ const router = createBrowserRouter([
             element: <Reviews />,
           },
         ],
+      },
+      {
+        path: "cart",
+        element: <Cart />,
+      },
+
+      {
+        path: "registration",
+        element: <Registration />,
+      },
+      {
+        path: "logIn",
+        element: <LogIn />,
+      },
+      {
+        path: "favoriteList",
+        element: <FavoriteList />,
       },
       {
         path: "topRaited",

@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import { SearchBar } from "components/SearchBar";
 import { pathBoard } from "path";
 import { FcVideoCall } from "react-icons/fc";
+import { getIsLogedIn, getCurrentUserName } from "state/selectors/users";
 import cart from "assets/headerIcons/cart.svg";
 import { MainMenu } from "components/MainMenu";
+import { useSelector } from "react-redux";
 
 const Wrapper = styled.div`
   font-family: "Lexend", sans-serif;
@@ -44,7 +46,7 @@ const MiddleLayer = styled.div`
   text-align: center;
   vertical-align: middle;
 `;
-const AccountWrapper = styled.div`
+const AccountWrapper = styled(Link)`
   text-align: center;
   align-items: center;
   min-width: 9rem;
@@ -52,9 +54,20 @@ const AccountWrapper = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+  border: 1px solid rgb(234, 232, 232);
+  border-radius: 25px;
+  text-decoration: none;
   font-size: 14px;
   font-weight: 400;
   color: rgba(70, 73, 79, 1);
+  &:hover,
+  &:focus,
+  &.active {
+    color: rgba(5, 66, 44, 1);
+    background-color: rgba(242, 246, 244, 1);
+    border: 1px solid rgba(23, 175, 38, 1);
+    outline: none;
+  }
   cursor: pointer;
 `;
 const CartContainer = styled.div`
@@ -83,6 +96,8 @@ const PurchaseAmmount = styled.div`
 `;
 
 function Header() {
+  const isLoggedIn = useSelector(getIsLogedIn);
+  const userName = useSelector(getCurrentUserName);
   return (
     <Wrapper>
       <OfferContainer>
@@ -93,15 +108,19 @@ function Header() {
           <FcVideoCall size={30} />
         </Link>
         <SearchBar />
-        <AccountWrapper>
-          Your account
-          <CartContainer>
-            <Link to={pathBoard.cart}>
-              <CartImg src={cart} alt="Cart" />
-            </Link>
-          </CartContainer>
-          <PurchaseAmmount>0</PurchaseAmmount>
-        </AccountWrapper>
+        {isLoggedIn ? (
+          <AccountWrapper to={pathBoard.favoriteList}>
+            <p>{userName}</p>
+            <CartContainer>
+              <div>
+                <CartImg src={cart} alt="Cart" />
+              </div>
+            </CartContainer>
+            <PurchaseAmmount>0</PurchaseAmmount>
+          </AccountWrapper>
+        ) : (
+          <AccountWrapper to={pathBoard.authentication}>Log in</AccountWrapper>
+        )}
       </MiddleLayer>
       <MainMenu />
     </Wrapper>
