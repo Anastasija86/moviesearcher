@@ -7,6 +7,7 @@ import { getCompare } from "./getCompareDate";
 import { getDate } from "./getDate";
 import { Spinner } from "components/uiPrimitives/Spinner";
 import { ReviewTextContainer } from "components/Review/ReviewTextConteiner";
+import { useParams } from "react-router-dom";
 
 const Wrapper = styled.section`
   height: 100%;
@@ -34,16 +35,18 @@ const PublicDate = styled.p`
   font-size: 0.6rem;
 `;
 
-
 function Reviews() {
   const [reviews, setReviews] = useState({});
+
+  const param = useParams();
+  const movieId = param.productId;
 
   async function getReview(id) {
     await getReviews(id).then((response) => setReviews(response));
   }
 
   useEffect(() => {
-    getReview(157336);
+    getReview(movieId);
   }, []);
 
   return (
@@ -68,7 +71,9 @@ function Reviews() {
               />
             </ReviewItem>
           ))
-      ) : <Spinner />}
+      ) : (
+        <Spinner />
+      )}
     </Wrapper>
   );
 }

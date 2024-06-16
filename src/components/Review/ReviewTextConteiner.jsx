@@ -31,7 +31,6 @@ const Raiting = styled.div`
 const Star = styled.span`
   margin-right: 8px;
 `;
-
 function ReviewTextContainer({ id, author, rating, content }) {
   return (
     <TextContainer>

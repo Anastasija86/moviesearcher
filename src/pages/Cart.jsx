@@ -1,8 +1,6 @@
 import React from "react";
 
-function Cart(){
-    return (
-        <></>
-    );
+function Cart() {
+  return <></>;
 }
 export { Cart };

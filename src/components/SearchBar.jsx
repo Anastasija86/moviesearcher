@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import magnifier from "assets/headerIcons/magnifier.svg";
+import { pathBoard } from "path";
 
 const Form = styled.form`
   height: 1.9rem;
@@ -19,10 +21,11 @@ export const Input = styled.input`
   padding-right: 24px;
   margin-right: 8px;
   cursor: pointer;
-  &:hover, &:focus{
+  &:hover,
+  &:focus {
     border: 1px solid rgba(23, 175, 38, 1);
     outline: none;
-    }
+  }
 `;
 const Button = styled.button`
   background-color: rgba(23, 175, 38, 1);
@@ -40,13 +43,29 @@ const Magnifier = styled.img`
 `;
 
 function SearchBar() {
+  const [movieName, setMovieName] = useState("");
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const value = e.currentTarget.value.toLowerCase();
+    setMovieName(value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`${pathBoard.search}/${movieName}`);
+    setMovieName("");
+  };
   return (
-      <Form>
-        <Input placeholder="Search"></Input>
-        <Button type="button">
-          <Magnifier src={magnifier} alt="Search button" />
-        </Button>
-      </Form>
+    <Form onSubmit={handleSubmit}>
+      <Input
+        placeholder="Search"
+        onChange={handleChange}
+        value={movieName}
+      ></Input>
+      <Button type="submit">
+        <Magnifier src={magnifier} alt="Search button" />
+      </Button>
+    </Form>
   );
 }
 

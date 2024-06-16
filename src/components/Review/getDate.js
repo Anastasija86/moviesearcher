@@ -10,7 +10,7 @@ const getDate = (dateString) => {
 };
 
 getDate.propType = {
-  dateString: PropTypes.string
+  dateString: PropTypes.string,
 };
 
 export { getDate };

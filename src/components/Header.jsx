@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { SearchBar } from "components/SearchBar";
 import { pathBoard } from "path";
+import { FcVideoCall } from "react-icons/fc";
 import { getIsLogedIn, getCurrentUserName } from "state/selectors/users";
-import logo from "assets/headerIcons/logo.svg";
 import cart from "assets/headerIcons/cart.svg";
 import { MainMenu } from "components/MainMenu";
 import { useSelector } from "react-redux";
@@ -17,6 +17,8 @@ const Wrapper = styled.div`
   left: 0;
   height: 7.75rem;
   width: 100%;
+  z-index: 1000;
+  overflow: hidden;
 `;
 const OfferContainer = styled.div`
   background-color: rgba(5, 66, 44, 1);
@@ -29,7 +31,7 @@ const OfferContainer = styled.div`
 `;
 const OfferText = styled.p`
   margin: 0;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.811);
   font-weight: 400;
   font-size: 0.7rem;
   width: 100%;
@@ -43,10 +45,6 @@ const MiddleLayer = styled.div`
   justify-content: space-between;
   text-align: center;
   vertical-align: middle;
-`;
-const Logo = styled.img`
-  width: 8rem;
-  cursor: pointer;
 `;
 const AccountWrapper = styled(Link)`
   text-align: center;
@@ -97,17 +95,17 @@ const PurchaseAmmount = styled.div`
   cursor: pointer;
 `;
 
-export default function Header() {
+function Header() {
   const isLoggedIn = useSelector(getIsLogedIn);
   const userName = useSelector(getCurrentUserName);
   return (
     <Wrapper>
       <OfferContainer>
-        <OfferText>LIMITED OFFER: 30% OFF. Use RABBIT30 at Checkout.</OfferText>
+        <OfferText>Find your movie among millions here...</OfferText>
       </OfferContainer>
       <MiddleLayer>
         <Link to={pathBoard.home}>
-          <Logo src={logo} alt="Logo" />
+          <FcVideoCall size={30} />
         </Link>
         <SearchBar />
         {isLoggedIn ? (

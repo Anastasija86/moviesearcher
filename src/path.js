@@ -1,21 +1,28 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "components/Layout";
-import { Home } from "pages/Home";
-import { Catalog } from "pages/Catalog";
-import { Contact } from "pages/Contact";
+import { Popular } from "pages/Popular";
+import { TopRated } from "pages/TopRated";
+import { Upcoming } from "pages/Upcoming";
 import { ErrorPage } from "pages/Error";
+import { Search } from "pages/Search";
+import { Product } from "pages/product/index";
+import { Actors } from "components/ActorList/index";
+import { Reviews } from "components/Review/index";
 import { Cart } from "pages/Cart";
 import { Registration } from "pages/Registration";
 import { LogIn } from "pages/LogIn";
 import { FavoriteList } from "pages/favoriteList/FavoriteList";
 
+
 export const pathBoard = {
   home: "/",
-  catalog: "/catalog",
+  topRaited: "/topRaited",
+  upcoming: "/upcoming",
   contact: "/contact",
+  search: "/search",
+  PRODUCT: "/product",
   cart: "/cart",
-  PRODUCT: "product",
   PRODUCT_ACTORS: "/product/actors",
   PRODUCT_REVIEWS: "/product/reviews",
   registration: "/registration",
@@ -31,20 +38,27 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Popular />,
       },
       {
-        path: "catalog",
-        element: <Catalog />,
-      },
-      {
-        path: "contact",
-        element: <Contact />,
+        path: "product/:productId",
+        element: <Product />,
+        children: [
+          {
+            path: "actors",
+            element: <Actors />,
+          },
+          {
+            path: "reviews",
+            element: <Reviews />,
+          },
+        ],
       },
       {
         path: "cart",
         element: <Cart />,
       },
+
       {
         path: "registration",
         element: <Registration />,
@@ -58,16 +72,16 @@ const router = createBrowserRouter([
         element: <FavoriteList />,
       },
       {
-        path: "registration",
-        element: <Registration />,
+        path: "topRaited",
+        element: <TopRated />,
       },
       {
-        path: "logIn",
-        element: <LogIn />,
+        path: "upcoming",
+        element: <Upcoming />,
       },
       {
-        path: "favoriteList",
-        element: <FavoriteList />,
+        path: "search/:name",
+        element: <Search />,
       },
     ],
   },

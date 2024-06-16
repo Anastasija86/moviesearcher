@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { pathBoard } from "path";
-import { NavLink, Outlet} from "react-router-dom";
+import { NavLink, Outlet, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getDetailsById } from "apis/movies/index";
 import { Poster } from "pages/product/Poster";
@@ -10,7 +10,6 @@ import { ActionIcons } from "pages/product/ActionIcons";
 
 const Wrapper = styled.section`
   padding: 1rem 4.5rem;
-  margin-top: 7.85rem;
   display: flex;
 `;
 const ContantContainer = styled.div`
@@ -39,16 +38,17 @@ const NestedLink = styled(NavLink)`
   }
 `;
 
-
 function Product() {
+  const params = useParams();
+  const movieId = params.productId;
   const nestedLink = [
     {
       name: "Actors",
-      path: pathBoard.PRODUCT_ACTORS,
+      path: `${pathBoard.PRODUCT}/${movieId}/actors`,
     },
     {
       name: "Review",
-      path: pathBoard.PRODUCT_REVIEWS,
+      path: `${pathBoard.PRODUCT}/${movieId}/reviews`,
     },
   ];
 
@@ -58,7 +58,7 @@ function Product() {
   }
 
   useEffect(() => {
-    getMovieDetails(157336);
+    getMovieDetails(movieId);
   }, []);
   const {
     poster_path,
@@ -84,8 +84,8 @@ function Product() {
         <h3>Overview</h3>
         <p>{overview}</p>
         <ChildrenContainer>
-          {nestedLink.map(({ name, path }, index) => (
-            <NestedLink key={index} to={path}>
+          {nestedLink.map(({ name, path }) => (
+            <NestedLink key={name} to={path}>
               {name}
             </NestedLink>
           ))}

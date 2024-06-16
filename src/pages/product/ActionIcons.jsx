@@ -40,19 +40,18 @@ const ActionIconsList = [
     icon: <AiFillStar />,
   },
 ];
-
-function ActionIcons({raiting}) {
-    return (
-      <Wrapper>
-        <ProgressBar raiting={raiting} />
-        {ActionIconsList.map((item, index) => (
-          <IconContainer key={index} id={`icon-${index}`}>
-            {item.icon}
-            <Tooltip anchorSelect={`#icon-${index}`} content={item.name} />
-          </IconContainer>
-        ))}
-      </Wrapper>
-    );
+function ActionIcons({ raiting }) {
+  return (
+    <Wrapper>
+      <ProgressBar raiting={raiting} />
+      {ActionIconsList.map((item, index) => (
+        <IconContainer key={index} id={`icon-${index}`}>
+          {item.icon}
+          <Tooltip anchorSelect={`#icon-${index}`} content={item.name} />
+        </IconContainer>
+      ))}
+    </Wrapper>
+  );
 }
 
 ActionIcons.propTypes = {

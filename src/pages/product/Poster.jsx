@@ -14,7 +14,7 @@ const Image = styled.img`
   border-radius: 2rem;
 `;
 
-function Poster({path}) {
+function Poster({ path }) {
   return (
     <Wrapper>
       <Image

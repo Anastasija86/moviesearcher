@@ -8,6 +8,7 @@ function Spinner() {
       height="80"
       width="80"
       color="#4fa94d"
+      strokeWidth="4"
       ariaLabel="oval-loading"
       wrapperStyle={{}}
       wrapperClass=""

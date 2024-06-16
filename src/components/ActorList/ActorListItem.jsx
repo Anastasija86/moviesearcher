@@ -2,7 +2,6 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import React from "react";
 
-
 const Wrapper = styled.ul`
   display: flex;
   padding-bottom: 60px;
@@ -41,7 +40,7 @@ const ActorRole = styled(ActorName)`
   padding: 5px;
 `;
 
-function ActorList({actors}) {
+function ActorList({ actors }) {
   return (
     <Wrapper>
       {actors?.map(({ id, profile_path, name, character }) =>
