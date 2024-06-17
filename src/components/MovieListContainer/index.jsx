@@ -55,9 +55,10 @@ function MovieListContainer({ method, movieName }) {
     <Wrapper>
       {loading && <Spinner />}
       {!loading && movies.length > 0 && <Movies movies={movies} />}
-      {!loading && page < totalPage && (
-        <LoadMoreButton onClick={handleLoadMoreClick} />
-      )}
+        {" "}
+        {!loading && page < totalPage && (
+          <LoadMoreButton onClick={handleLoadMoreClick} />
+        )}
     </Wrapper>
   );
 }
