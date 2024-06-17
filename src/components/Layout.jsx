@@ -7,7 +7,6 @@ import styled from "styled-components";
 const Main = styled.main`
   flex: 1;
   margin-top: 7.75rem;
-  margin-bottom: 1rem;
   overflow-y: auto;
 `;
 const LayoutContainer = styled.div`
