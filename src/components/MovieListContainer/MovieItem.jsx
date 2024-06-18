@@ -22,6 +22,12 @@ const ItemContainer = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   color: black;
+  &:hover,
+  &:focus,
+  &.active {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.5),
+      0 0 25px rgba(0, 0, 0, 0.5);
+  }
 `;
 
 const ImgContainer = styled.div`
@@ -32,12 +38,16 @@ const ImgContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #84887f7a;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 `;
 
 const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 `;
 
 const TextName = styled.p`

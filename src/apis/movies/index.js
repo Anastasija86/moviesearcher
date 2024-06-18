@@ -65,3 +65,9 @@ export async function getMovieListByName(page, name) {
     `search/movie?api_key=${apiKey}&query=${name}&include_adult=false&language=en-US&page=${page}`
   );
 }
+
+export async function getVideosById(movieId) {
+  return await fetchMovie(
+    `movie/${movieId}/videos?api_key=${apiKey}&language=en-US`
+  );
+}

@@ -11,6 +11,7 @@ const Wrapper = styled.form`
   background-color: white;
   border-radius: 15px;
   padding: 25px;
+  height: min-content;
 `;
 const Title = styled.h1`
   margin-left: auto;

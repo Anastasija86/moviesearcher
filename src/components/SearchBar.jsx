@@ -36,6 +36,13 @@ const Button = styled.button`
   padding-block: 0;
   padding-inline: 0;
   cursor: pointer;
+  &:hover,
+  &:focus,
+  &.active {
+    background-color: rgba(23, 175, 38, 1);
+    color: white;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.5);
+  }
 `;
 const Magnifier = styled.img`
   width: 0.8rem;

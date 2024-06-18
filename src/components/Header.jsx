@@ -53,7 +53,6 @@ const AccountWrapper = styled(Link)`
   height: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
   border: 1px solid rgb(234, 232, 232);
   border-radius: 25px;
   text-decoration: none;
@@ -94,6 +93,7 @@ const PurchaseAmmount = styled.div`
   font-size: 10px;
   cursor: pointer;
 `;
+
 
 function Header() {
   const isLoggedIn = useSelector(getIsLogedIn);
