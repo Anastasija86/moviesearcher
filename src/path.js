@@ -13,7 +13,7 @@ import { Cart } from "pages/Cart";
 import { Registration } from "pages/Registration";
 import { LogIn } from "pages/LogIn";
 import { FavoriteList } from "pages/favoriteList/FavoriteList";
-
+import { Trailer } from "components/Trailer";
 
 export const pathBoard = {
   home: "/",
@@ -25,6 +25,7 @@ export const pathBoard = {
   cart: "/cart",
   PRODUCT_ACTORS: "/product/actors",
   PRODUCT_REVIEWS: "/product/reviews",
+  PRODUCT_TRAILER: "/product/trailer",
   registration: "/registration",
   authentication: "/logIn",
   favoriteList: "/favoriteList",
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
           {
             path: "reviews",
             element: <Reviews />,
+          },
+          {
+            path: "trailer",
+            element: <Trailer />,
           },
         ],
       },

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { GenreList } from "pages/product/Genres";
 import { ProgressBar } from "pages/product/ProgressScoreIcon";
@@ -7,6 +7,9 @@ import { BsFillHeartFill } from "react-icons/bs";
 import { FaList } from "react-icons/fa6";
 import { AiFillStar } from "react-icons/ai";
 import PropTypes from "prop-types";
+import { Button } from "components/uiPrimitives/Button";
+import { FaPlay } from "react-icons/fa";
+import { Trailer } from "components/Trailer";
 
 const Wrapper = styled(GenreList)`
   margin-bottom: 45px;
@@ -24,6 +27,29 @@ const IconContainer = styled.div`
   margin: 0 5px;
   cursor: pointer;
   color: white;
+  &:hover,
+  &:focus,
+  &.active {
+    background-color: rgba(23, 175, 38, 1);
+    color: white;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.5),
+      0 0 25px rgba(0, 0, 0, 0.5);
+  }
+`;
+const Icon = styled(FaPlay)`
+  margin-right: 5px;
+`;
+const PlayButton = styled(Button)`
+  width: 8rem;
+  margin-left: 2rem;
+  &:hover,
+  &:focus,
+  &.active {
+    background-color: rgba(23, 175, 38, 1);
+    color: white;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.5),
+      0 0 25px rgba(0, 0, 0, 0.5);
+  }
 `;
 
 const ActionIconsList = [
@@ -41,6 +67,11 @@ const ActionIconsList = [
   },
 ];
 function ActionIcons({ raiting }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <Wrapper>
       <ProgressBar raiting={raiting} />
@@ -50,6 +81,11 @@ function ActionIcons({ raiting }) {
           <Tooltip anchorSelect={`#icon-${index}`} content={item.name} />
         </IconContainer>
       ))}
+      <PlayButton onClick={handleClick}>
+        <Icon />
+        <>Trailer</>
+      </PlayButton>
+      {isOpen && <Trailer handleClick={handleClick} />}
     </Wrapper>
   );
 }

@@ -12,5 +12,9 @@ const Button = styled.button`
   color: rgba(255, 255, 255, 1);
   font-size: 16px;
   font-weight: bold;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 `;
 export { Button };
